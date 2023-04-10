@@ -1,3 +1,32 @@
+<!DOCTYPE html>
 <html>
-  Olá Mundo!
+  <head>
+    <meta charset="utf-8">
+    <title>Meu motor de animação</title>
+    <style>
+      #seconds {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <div id="seconds"></div>
+    <script>
+      // Atualiza o elemento "seconds" a cada segundo
+      setInterval(function() {
+        var now = new Date();
+        var seconds = now.getSeconds();
+        var secondsElement = document.getElementById('seconds');
+        secondsElement.innerHTML = 'Segundos: ' + seconds;
+      }, 1000);
+    </script>
+  </body>
 </html>
